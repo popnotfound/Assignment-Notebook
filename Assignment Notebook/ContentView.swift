@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var items = ["0", "1", "2", "3"]
+    @State private var assignmentItem = [AssignmentItem(classes: "Math", description: "Algebra", dueDate: Date()), AssignmentItem(classes: "Science", description: "Chemistry", dueDate: Date()), AssignmentItem(classes: "English", description: "Essay", dueDate: Date()), AssignmentItem(classes: "History", description: "Read TextBook", dueDate: Date())]
     var body: some View {
         NavigationView {
             List {
-                ForEach(items, id: \.self) { item in
-                    Text(item)
+                ForEach(assignmentItem) { item in
+                    Text(item.description)
                 }
                 .onMove(perform: { indices, newOffset in
-                    items.move(fromOffsets: indices, toOffset: newOffset)
+                    assignmentItem.move(fromOffsets: indices, toOffset: newOffset)
                 })
                 .onDelete(perform: { indexSet in
-                    items.remove(atOffsets: indexSet)
+                    assignmentItem.remove(atOffsets: indexSet)
                 })
             }
-            .navigationBarTitle("Classes", displayMode: .inline)
+            .navigationBarTitle("Assignment Notebook", displayMode: .inline)
             .navigationBarItems(leading: EditButton())
         }
     }
@@ -32,6 +32,13 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+struct AssignmentItem: Identifiable {
+    var id = UUID()
+    var classes = String()
+    var description = String()
+    var dueDate = Date()
 }
 
 
