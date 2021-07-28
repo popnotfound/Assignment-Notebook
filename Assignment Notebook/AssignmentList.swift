@@ -9,5 +9,5 @@ import Foundation
 import SwiftUI
 
 class AssignmentList: ObservableObject {
-    @Published var items = [AssignmentItem(classes: "Math", description: "Algebra", dueDate: Date()), AssignmentItem(classes: "Science", description: "Chemistry", dueDate: Date()), AssignmentItem(classes: "English", description: "Essay", dueDate: Date()), AssignmentItem(classes: "History", description: "Read TextBook", dueDate: Date())]
+    @Published var items = [AssignmentItem(course: "Math", description: "Algebra", dueDate: Date()), AssignmentItem(course: "Science", description: "Chemistry", dueDate: Date()), AssignmentItem(course: "English", description: "Essay", dueDate: Date()), AssignmentItem(course: "History", description: "Read TextBook", dueDate: Date())]
  }

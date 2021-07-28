@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var assignmentItem = AssignmentList()
+    @ObservedObject var assignmentList = AssignmentList()
     var body: some View {
         NavigationView {
             List {
-                ForEach(assignmentItem.items) { item in
+                ForEach(assignmentList.items) {item in
                     HStack {
                         VStack(alignment: .leading) {
-                            Text(item.classes)
+                            Text(item.course)
                                 .font(.headline)
                             Text(item.description)
                         }
@@ -24,10 +24,10 @@ struct ContentView: View {
                     }
                 }
                 .onMove(perform: { indices, newOffset in
-                    assignmentItem.items.move(fromOffsets: indices, toOffset: newOffset)
+                    assignmentList.items.move(fromOffsets: indices, toOffset: newOffset)
                 })
                 .onDelete(perform: { indexSet in
-                    assignmentItem.items.remove(atOffsets: indexSet)
+                    assignmentList.items.remove(atOffsets: indexSet)
                 })
             }
             .navigationBarTitle("Assignment Notebook", displayMode: .inline)
@@ -44,7 +44,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct AssignmentItem: Identifiable {
     var id = UUID()
-    var classes = String()
+    var course = String()
     var description = String()
     var dueDate = Date()
 }
