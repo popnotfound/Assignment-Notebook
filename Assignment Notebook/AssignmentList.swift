@@ -8,6 +8,6 @@
 import Foundation
 import SwiftUI
 
-class addAssignments: ObservableObject {
+class AssignmentList: ObservableObject {
     @Published var items = [AssignmentItem(classes: "Math", description: "Algebra", dueDate: Date()), AssignmentItem(classes: "Science", description: "Chemistry", dueDate: Date()), AssignmentItem(classes: "English", description: "Essay", dueDate: Date()), AssignmentItem(classes: "History", description: "Read TextBook", dueDate: Date())]
  }
