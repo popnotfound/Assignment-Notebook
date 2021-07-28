@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var assignmentList = AssignmentList()
+    @ObservedObject var assignmentList = AssignmentList() // Refers to AssignmentList view
     @State private var showingAddAssignmentView = false
     var body: some View {
         NavigationView {
@@ -27,16 +27,18 @@ struct ContentView: View {
                 .onMove(perform: { indices, newOffset in
                     assignmentList.items.move(fromOffsets: indices, toOffset: newOffset)
                 })
+                // Moves an Assignment from the list
                 .onDelete(perform: { indexSet in
                     assignmentList.items.remove(atOffsets: indexSet)
                 })
+                // Deletes an Assignment from the list
             }
             .sheet(isPresented: $showingAddAssignmentView, content: {
                 AddAssignmentView(assignmentList: assignmentList)
             })
             .navigationBarTitle("Assignment Notebook", displayMode: .inline)
             .navigationBarItems(leading: EditButton(), trailing: Button(action: {showingAddAssignmentView = true}) {Image(systemName: "plus")
-                
+                //Shows the AddAssignmentView when pressing the plus icon
             })
         }
     }
@@ -55,5 +57,8 @@ struct AssignmentItem: Identifiable, Codable {
     var description = String()
     var dueDate = Date()
 }
+
+// Enables data persistence over mutiple uses of the app and declares Strings, Dates, and IDs for declaration for other variables
+
 
 

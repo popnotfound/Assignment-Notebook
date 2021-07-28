@@ -17,7 +17,7 @@ class AssignmentList: ObservableObject {
             }
         }
     }
-    init() {
+    init() { // logic for data persistence and data transformation across simulation and app uses
         if let items = UserDefaults.standard.data(forKey: "data") {
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([AssignmentItem].self, from: items) {
