@@ -13,6 +13,7 @@
 		9C0A65D426B1C4B500079EB9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0A65D326B1C4B500079EB9 /* Preview Assets.xcassets */; };
 		9C0A65DF26B1C4B500079EB9 /* Assignment_NotebookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A65DE26B1C4B500079EB9 /* Assignment_NotebookTests.swift */; };
 		9C0A65EA26B1C4B500079EB9 /* Assignment_NotebookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A65E926B1C4B500079EB9 /* Assignment_NotebookUITests.swift */; };
+		9C0A65F826B1CA3C00079EB9 /* AddAssignmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A65F726B1CA3C00079EB9 /* AddAssignmentsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		9C0A65E526B1C4B500079EB9 /* Assignment NotebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Assignment NotebookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0A65E926B1C4B500079EB9 /* Assignment_NotebookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment_NotebookUITests.swift; sourceTree = "<group>"; };
 		9C0A65EB26B1C4B500079EB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C0A65F726B1CA3C00079EB9 /* AddAssignmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				9C0A65CC26B1C4B300079EB9 /* Assignment_NotebookApp.swift */,
 				9C0A65CE26B1C4B300079EB9 /* ContentView.swift */,
+				9C0A65F726B1CA3C00079EB9 /* AddAssignmentsView.swift */,
 				9C0A65D026B1C4B500079EB9 /* Assets.xcassets */,
 				9C0A65D526B1C4B500079EB9 /* Info.plist */,
 				9C0A65D226B1C4B500079EB9 /* Preview Content */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0A65CF26B1C4B300079EB9 /* ContentView.swift in Sources */,
+				9C0A65F826B1CA3C00079EB9 /* AddAssignmentsView.swift in Sources */,
 				9C0A65CD26B1C4B300079EB9 /* Assignment_NotebookApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
